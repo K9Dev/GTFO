@@ -10,12 +10,21 @@
     <sprite>sprites\sprite_left</sprite>
     <sprite>sprites\sprite_right</sprite>
     <sprite>sprites\sprite_up</sprite>
+    <sprite>sprites\spr_floor</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\logger.gml</script>
+    <script>scripts\scr_input.gml</script>
   </scripts>
+  <objects name="objects">
+    <object>objects\obj_mario</object>
+    <object>objects\obj_floor</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_stage1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
