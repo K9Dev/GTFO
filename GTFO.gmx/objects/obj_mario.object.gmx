@@ -27,7 +27,21 @@
             <kind>1</kind>
             <string>///Create
 
-scr_input();
+//scr_input();
+//custom gravity
+grav = 0.2;
+
+//custom horizontal speed
+hsp = 0;
+
+//custom vertical speed
+vsp = 0;
+
+//custom jumpspeed
+jumpspeed = 7;
+
+//custom movespeed
+movespeed = 4;
 
 chk_jump = false;
 jump_height = 64;
@@ -80,6 +94,45 @@ jump_height = 64;
 
 scr_input();
 
+//Check if a floor is below the player --&gt; if true, you can jump
+if(place_meeting(x, y + 1, obj_floor)){
+
+    //If key_jump is pressed --&gt; = 1 and is set to negative jumpspeed (for example to -7 to move upwards)
+    vsp = key_jump * -jumpspeed;
+}
+
+//Set them directions for the player
+x += hsp;
+y += vsp;
+
+//is player going to colide with oject horizontal
+if(place_meeting(x + hsp, y, obj_floor)){
+
+    // sign = return 1 or -1 if hsp is negative or positive
+    while(!place_meeting(x+sign(hsp), y, obj_floor)){
+        
+        //move player 1 pixel towards the object
+        x += sign(hsp);
+    }
+    
+    //collision with object
+    hsp = 0;
+} 
+
+//is player going to colide with oject?
+if(place_meeting(x, y + vsp, obj_floor)){
+
+    // sign = return 1 or -1 if hsp is negative or positive
+    while(!place_meeting(x, y+sign(vsp), obj_floor)){
+        
+        //move player 1 pixel towards the object
+        y += sign(vsp);
+    }
+    
+    //collision with object
+    vsp = 0;
+} 
+/*
 yPrev = y;
 
 //if floor below, you can jump
@@ -98,7 +151,7 @@ if (bt_jump == true and chk_jump == false)
 if (alarm[0] &gt;= 0){
      phy_position_y -= 2;   
 
-}
+}*/
 </string>
           </argument>
         </arguments>
@@ -121,7 +174,7 @@ if (alarm[0] &gt;= 0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Collision event
+            <string>///Collision with wall
 </string>
           </argument>
         </arguments>
