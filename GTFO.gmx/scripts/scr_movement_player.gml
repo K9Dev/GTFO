@@ -10,7 +10,7 @@ if(place_meeting(x, y + 1, obj_floor)){
     vsp = key_jump * -jumpspeed;
 }
 
-//is player going to colide with oject horizontal
+//is player going to collide with object horizontal
 if(place_meeting(x + hsp, y, obj_floor)){
 
     // sign = return 1 or -1 if hsp is negative or positive
@@ -24,10 +24,10 @@ if(place_meeting(x + hsp, y, obj_floor)){
     hsp = 0;
 } 
 
-//Set them directions for the player
+//Move the player
 x += hsp;
 
-//is player going to colide with oject?
+//is player going to collide with object?
 if(place_meeting(x, y + vsp, obj_floor)){
 
     // sign = return 1 or -1 if hsp is negative or positive
@@ -43,5 +43,5 @@ if(place_meeting(x, y + vsp, obj_floor)){
 } 
 
 //sprite_index = sprite_right;
-//Set them directions for the player
+//Move the player
 y += vsp;

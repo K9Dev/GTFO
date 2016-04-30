@@ -2,14 +2,14 @@
 with (obj_mario){
 
     if(key_right == 1){
-        sprite_index = sprite_right;
+        sprite_index = spr_right;
     }
     
     if(key_left == -1){
-        sprite_index = sprite_left;
+        sprite_index = spr_left;
     }
 
     if(key_jump == 1){
-        sprite_index = sprite_up;
+        sprite_index = spr_up;
     } 
 }

@@ -6,13 +6,19 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite_down</sprite>
-    <sprite>sprites\sprite_left</sprite>
-    <sprite>sprites\sprite_right</sprite>
-    <sprite>sprites\sprite_up</sprite>
+    <sprite>sprites\spr_down</sprite>
+    <sprite>sprites\spr_left</sprite>
+    <sprite>sprites\spr_right</sprite>
+    <sprite>sprites\spr_up</sprite>
     <sprite>sprites\spr_floor</sprite>
+    <sprite>sprites\spr_box</sprite>
+    <sprite>sprites\spr_turtle</sprite>
+    <sprite>sprites\spr_floor_grasmud</sprite>
+    <sprite>sprites\spr_floor_mud</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bkg_wooden</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\logger.gml</script>
@@ -21,11 +27,22 @@
     <script>scripts\scr_sprite_index_setter.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_mario</object>
-    <object>objects\obj_floor</object>
+    <objects name="Player Objects">
+      <object>objects\obj_mario</object>
+      <object>objects\obj_player_control</object>
+    </objects>
+    <objects name="Frame Objects">
+      <object>objects\obj_mud</object>
+      <object>objects\obj_grasmud</object>
+      <object>objects\obj_floor</object>
+    </objects>
+    <object>objects\obj_box</object>
+    <object>objects\obj_turtle</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_stage1</room>
+    <room>rooms\rm_test_puzzle</room>
+    <room>rooms\rm_test_general</room>
+    <room>rooms\rm_test_sprites</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
