@@ -101,10 +101,6 @@ if(place_meeting(x, y + 1, obj_floor)){
     vsp = key_jump * -jumpspeed;
 }
 
-//Set them directions for the player
-x += hsp;
-y += vsp;
-
 //is player going to colide with oject horizontal
 if(place_meeting(x + hsp, y, obj_floor)){
 
@@ -119,6 +115,10 @@ if(place_meeting(x + hsp, y, obj_floor)){
     hsp = 0;
 } 
 
+//Set them directions for the player
+x += hsp;
+
+
 //is player going to colide with oject?
 if(place_meeting(x, y + vsp, obj_floor)){
 
@@ -132,6 +132,10 @@ if(place_meeting(x, y + vsp, obj_floor)){
     //collision with object
     vsp = 0;
 } 
+
+//Set them directions for the player
+y += vsp;
+
 /*
 yPrev = y;
 
