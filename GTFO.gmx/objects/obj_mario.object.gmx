@@ -50,29 +50,6 @@ jump_height = 64;
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///jump
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -90,72 +67,9 @@ jump_height = 64;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Movement
+            <string>///Movement input
+scr_movement_player();
 
-scr_input();
-
-//Check if a floor is below the player --&gt; if true, you can jump
-if(place_meeting(x, y + 1, obj_floor)){
-
-    //If key_jump is pressed --&gt; = 1 and is set to negative jumpspeed (for example to -7 to move upwards)
-    vsp = key_jump * -jumpspeed;
-}
-
-//is player going to colide with oject horizontal
-if(place_meeting(x + hsp, y, obj_floor)){
-
-    // sign = return 1 or -1 if hsp is negative or positive
-    while(!place_meeting(x+sign(hsp), y, obj_floor)){
-        
-        //move player 1 pixel towards the object
-        x += sign(hsp);
-    }
-    
-    //collision with object
-    hsp = 0;
-} 
-
-//Set them directions for the player
-x += hsp;
-
-
-//is player going to colide with oject?
-if(place_meeting(x, y + vsp, obj_floor)){
-
-    // sign = return 1 or -1 if hsp is negative or positive
-    while(!place_meeting(x, y+sign(vsp), obj_floor)){
-        
-        //move player 1 pixel towards the object
-        y += sign(vsp);
-    }
-    
-    //collision with object
-    vsp = 0;
-} 
-
-//Set them directions for the player
-y += vsp;
-
-/*
-yPrev = y;
-
-//if floor below, you can jump
-if !(place_empty(x, y+1)){
-    chk_jump = false;
-}
-
-//jumping
-if (bt_jump == true and chk_jump == false)
-{
-    show_debug_message("Jump")
-    chk_jump = true;
-    alarm[0]=room_speed;
-}
-    
-if (alarm[0] &gt;= 0){
-     phy_position_y -= 2;   
-
-}*/
 </string>
           </argument>
         </arguments>
@@ -185,7 +99,7 @@ if (alarm[0] &gt;= 0){
       </action>
     </event>
   </events>
-  <PhysicsObject>-1</PhysicsObject>
+  <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
@@ -196,10 +110,5 @@ if (alarm[0] &gt;= 0){
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>18,20</point>
-    <point>10,20</point>
-    <point>10,10</point>
-    <point>18,10</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>

@@ -17,6 +17,8 @@
   <scripts name="scripts">
     <script>scripts\logger.gml</script>
     <script>scripts\scr_input.gml</script>
+    <script>scripts\scr_movement_player.gml</script>
+    <script>scripts\scr_sprite_index_setter.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_mario</object>
