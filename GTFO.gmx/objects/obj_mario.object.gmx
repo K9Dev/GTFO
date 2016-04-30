@@ -45,6 +45,9 @@ movespeed = 4;
 
 chk_jump = false;
 jump_height = 64;
+
+//the player step event will execute the current state script
+state = scr_movement_player;
 </string>
           </argument>
         </arguments>
@@ -67,8 +70,8 @@ jump_height = 64;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Movement input
-scr_movement_player();
+            <string>///Execute state
+script_execute(state);
 
 </string>
           </argument>

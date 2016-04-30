@@ -25,6 +25,8 @@
     <script>scripts\scr_input.gml</script>
     <script>scripts\scr_movement_player.gml</script>
     <script>scripts\scr_sprite_index_setter.gml</script>
+    <script>scripts\scr_pause.gml</script>
+    <script>scripts\scr_save_position.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Player Objects">
@@ -43,6 +45,7 @@
     <room>rooms\rm_test_puzzle</room>
     <room>rooms\rm_test_general</room>
     <room>rooms\rm_test_sprites</room>
+    <room>rooms\rm_pause</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

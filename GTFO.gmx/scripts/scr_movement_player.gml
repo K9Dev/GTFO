@@ -1,6 +1,14 @@
 ///Movement
 scr_input();
 
+//pause
+if (pause_key and !just_paused){
+    scr_save_position();
+    room_goto(rm_pause);
+    state = scr_pause;
+}
+just_paused = false;
+
 scr_sprite_index_setter();
 
 //Check if a floor is below the player --> if true, you can jump
