@@ -1,6 +1,11 @@
 ///Movement
 scr_input();
 
+//cheating additional jumps
+if (cheat_key){
+    obj_player_control.jump_counter =+5;
+}
+
 //pause
 if (pause_key and !just_paused){
     scr_save_position();
@@ -10,6 +15,14 @@ if (pause_key and !just_paused){
 just_paused = false;
 
 scr_sprite_index_setter();
+
+//if no jumps left, cant jump
+if (obj_player_control.jump_counter <= 0){
+    key_jump = false;
+}
+if (key_jump and place_meeting(x, y + 1, obj_floor)){
+    obj_player_control.jump_counter --;
+}
 
 //Check if a floor is below the player --> if true, you can jump
 if(place_meeting(x, y + 1, obj_floor)){
