@@ -7,6 +7,7 @@ bt_right = gamepad_button_check(0, gp_padr);*/
 key_jump  = keyboard_check_pressed(ord("W"));
 key_left  = -keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
+down_key  = keyboard_check_pressed(ord("S"));
 pause_key = keyboard_check_pressed(ord("P"));
 cheat_key = keyboard_check_pressed(ord("Q"));
 

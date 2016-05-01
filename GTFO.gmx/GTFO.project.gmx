@@ -48,6 +48,8 @@
     </objects>
     <object>objects\obj_box</object>
     <object>objects\obj_turtle</object>
+    <object>objects\obj_door</object>
+    <object>objects\object8</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test_puzzle</room>

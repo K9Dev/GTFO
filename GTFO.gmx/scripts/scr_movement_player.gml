@@ -14,6 +14,15 @@ if (pause_key and !just_paused){
 }
 just_paused = false;
 
+//going through door. the variables for the door can be set in the instance creation code for each door indiviually
+/*if(place_meeting(x, y, obj_door) and down_key){
+    with (obj_door){
+        room_goto(obj_door.new_room);
+        x = obj_door.doorx;
+        y = obj_door.doory;
+    }
+}*/
+
 scr_sprite_index_setter();
 
 //if no jumps left, cant jump
