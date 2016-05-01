@@ -15,6 +15,14 @@
     <sprite>sprites\spr_turtle</sprite>
     <sprite>sprites\spr_floor_grasmud</sprite>
     <sprite>sprites\spr_floor_mud</sprite>
+    <sprite>sprites\spr_door5</sprite>
+    <sprite>sprites\spr_door3</sprite>
+    <sprite>sprites\spr_door1</sprite>
+    <sprite>sprites\spr_doorkey</sprite>
+    <sprite>sprites\spr_key</sprite>
+    <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_switch</sprite>
+    <sprite>sprites\spr_switch_barrier</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_wooden</background>
