@@ -25,29 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create
+            <string>///Initialize Variables
 
-//scr_input();
-//custom gravity
 grav = 0.2;
-
-//custom horizontal speed
 hsp = 0;
-
-//custom vertical speed
 vsp = 0;
-
-//custom jumpspeed
 jumpspeed = 7;
-
-//custom movespeed
 movespeed = 4;
-
 chk_jump = false;
 jump_height = 48;
-
-//the player step event will execute the current state script
-state = scr_movement_player;
+state = scr_main_state;
 </string>
           </argument>
         </arguments>
@@ -72,7 +59,6 @@ state = scr_movement_player;
             <kind>1</kind>
             <string>///Execute state
 script_execute(state);
-
 </string>
           </argument>
         </arguments>
@@ -95,8 +81,30 @@ script_execute(state);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//going through door. the variables for the door can be set in the instance creation code for each door indiviually
-if(down_key){
+            <string>///Go through the door
+
+//open the door in case it was closed
+other.closed = false;
+
+//check which door it is and if requierements are met
+
+//for 1 jump doors
+if (other.door1 and obj_player_control.jump_counter &lt; 1){
+    other.closed = true;
+}
+
+//for 3 jump doors
+if (other.door3 and obj_player_control.jump_counter &lt; 3){
+    other.closed = true;
+}
+
+//for 5 jump doors
+if (other.door5 and obj_player_control.jump_counter &lt; 5){
+    other.closed = true;
+}
+
+//going through door. the variables for the door can be set in the instance creation code for each door individually
+if(down_key and !other.closed){
     room_goto(other.new_room);
     x = other.doorx;
     y = other.doory;  
@@ -123,7 +131,7 @@ if(down_key){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Collision with wall
+            <string>///Collision with floor
 </string>
           </argument>
         </arguments>

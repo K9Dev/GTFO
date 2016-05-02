@@ -1,15 +1,12 @@
-// Set players sprite to the right direction
-with (obj_mario){
+///scr_sprite_index_setter
 
-    if(key_right == 1){
-        sprite_index = spr_right;
-    }
-    
-    if(key_left == -1){
-        sprite_index = spr_left;
-    }
-
-    if(key_jump == 1){
-        sprite_index = spr_up;
-    } 
+if(right_key){
+    sprite_index = spr_right;
+}  
+if(left_key){
+    sprite_index = spr_left;
 }
+if(jump_key){
+    sprite_index = spr_up;
+} 
+

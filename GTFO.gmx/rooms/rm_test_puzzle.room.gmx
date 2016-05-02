@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="obj_mario" xview="64" yview="576" wview="360" hview="280" xport="0" yport="0" wport="1024" hport="768" hborder="160" vborder="140" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="obj_player" xview="64" yview="576" wview="360" hview="280" xport="0" yport="0" wport="1024" hport="768" hborder="160" vborder="140" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -456,8 +456,8 @@
     <instance objName="obj_grasmud" x="1088" y="480" name="inst_736A433F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grasmud" x="1632" y="96" name="inst_56D46A32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grasmud" x="64" y="640" name="inst_26A8857D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door" x="864" y="416" name="inst_6E3C289C" locked="0" code="///door leading to rm_test_general&#xA;&#xA;new_room = rm_test_general;&#xA;doorx = 512;&#xA;doory = 288;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mario" x="64" y="576" name="inst_DCB240FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="64" y="576" name="inst_DCB240FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_3" x="864" y="416" name="inst_76C434EC" locked="0" code="///door leading to rm_test_general&#xA;&#xA;new_room = rm_test_general;&#xA;doorx = 512;&#xA;doory = 288;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

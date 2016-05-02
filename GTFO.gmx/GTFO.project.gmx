@@ -6,23 +6,33 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_down</sprite>
-    <sprite>sprites\spr_left</sprite>
-    <sprite>sprites\spr_right</sprite>
-    <sprite>sprites\spr_up</sprite>
-    <sprite>sprites\spr_floor</sprite>
-    <sprite>sprites\spr_box</sprite>
-    <sprite>sprites\spr_turtle</sprite>
-    <sprite>sprites\spr_floor_grasmud</sprite>
-    <sprite>sprites\spr_floor_mud</sprite>
-    <sprite>sprites\spr_door5</sprite>
-    <sprite>sprites\spr_door3</sprite>
-    <sprite>sprites\spr_door1</sprite>
-    <sprite>sprites\spr_doorkey</sprite>
-    <sprite>sprites\spr_key</sprite>
-    <sprite>sprites\spr_button</sprite>
-    <sprite>sprites\spr_switch</sprite>
-    <sprite>sprites\spr_switch_barrier</sprite>
+    <sprites name="Player Sprites">
+      <sprite>sprites\spr_left</sprite>
+      <sprite>sprites\spr_down</sprite>
+      <sprite>sprites\spr_up</sprite>
+      <sprite>sprites\spr_right</sprite>
+    </sprites>
+    <sprites name="NPCs">
+      <sprite>sprites\spr_turtle</sprite>
+    </sprites>
+    <sprites name="Floor and Walls">
+      <sprite>sprites\spr_floor_grasmud</sprite>
+      <sprite>sprites\spr_floor</sprite>
+      <sprite>sprites\spr_floor_mud</sprite>
+    </sprites>
+    <sprites name="Doors/Barriers and Keys">
+      <sprite>sprites\spr_switch</sprite>
+      <sprite>sprites\spr_door1</sprite>
+      <sprite>sprites\spr_door3</sprite>
+      <sprite>sprites\spr_door5</sprite>
+      <sprite>sprites\spr_button</sprite>
+      <sprite>sprites\spr_doorkey</sprite>
+      <sprite>sprites\spr_key</sprite>
+      <sprite>sprites\spr_switch_barrier</sprite>
+    </sprites>
+    <sprites name="Objects">
+      <sprite>sprites\spr_box</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_wooden</background>
@@ -31,25 +41,35 @@
   <scripts name="scripts">
     <script>scripts\logger.gml</script>
     <script>scripts\scr_input.gml</script>
-    <script>scripts\scr_movement_player.gml</script>
-    <script>scripts\scr_sprite_index_setter.gml</script>
-    <script>scripts\scr_pause.gml</script>
-    <script>scripts\scr_save_position.gml</script>
+    <scripts name="Player State Scripts">
+      <script>scripts\scr_main_state.gml</script>
+      <script>scripts\scr_movement.gml</script>
+      <script>scripts\scr_pause_state.gml</script>
+      <script>scripts\scr_sprite_index_setter.gml</script>
+      <script>scripts\scr_save_position.gml</script>
+      <script>scripts\scr_jump_limitation.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Player Objects">
-      <object>objects\obj_mario</object>
+      <object>objects\obj_player</object>
       <object>objects\obj_player_control</object>
     </objects>
-    <objects name="Frame Objects">
+    <objects name="Level Framing">
       <object>objects\obj_mud</object>
       <object>objects\obj_grasmud</object>
       <object>objects\obj_floor</object>
     </objects>
-    <object>objects\obj_box</object>
-    <object>objects\obj_turtle</object>
-    <object>objects\obj_door</object>
-    <object>objects\object8</object>
+    <objects name="NPCs and Objects">
+      <object>objects\obj_turtle</object>
+      <object>objects\obj_box</object>
+    </objects>
+    <objects name="Doors and Barriers">
+      <object>objects\obj_door</object>
+      <object>objects\obj_door_1</object>
+      <object>objects\obj_door_3</object>
+      <object>objects\obj_door_5</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test_puzzle</room>

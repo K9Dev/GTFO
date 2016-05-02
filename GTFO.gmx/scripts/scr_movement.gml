@@ -1,36 +1,20 @@
-///Movement
-scr_input();
+///scr_movement
 
-//cheating additional jumps
-if (cheat_key){
-    obj_player_control.jump_counter =+5;
+//move gives the direction
+move = right_key - left_key;
+hsp = move * movespeed;
+
+//add gravity if vertical speed is lower than 10
+if(vsp < 10){
+    vsp += grav;
 }
 
-//pause
-if (pause_key and !just_paused){
-    scr_save_position();
-    room_goto(rm_pause);
-    state = scr_pause;
-}
-just_paused = false;
-
-
-
-scr_sprite_index_setter();
-
-//if no jumps left, cant jump
-if (obj_player_control.jump_counter <= 0){
-    key_jump = false;
-}
-if (key_jump and place_meeting(x, y + 1, obj_floor)){
-    obj_player_control.jump_counter --;
-}
 
 //Check if a floor is below the player --> if true, you can jump
 if(place_meeting(x, y + 1, obj_floor)){
 
     //If key_jump is pressed --> = 1 and is set to negative jumpspeed (for example to -7 to move upwards)
-    vsp = key_jump * -jumpspeed;
+    vsp = jump_key * -jumpspeed;
 }
 
 //is player going to collide with object horizontal
@@ -65,6 +49,5 @@ if(place_meeting(x, y + vsp, obj_floor)){
     
 } 
 
-//sprite_index = sprite_right;
 //Move the player
 y += vsp;
