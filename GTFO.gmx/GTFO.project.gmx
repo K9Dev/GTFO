@@ -53,7 +53,8 @@
       <script>scripts\scr_jump_limitation.gml</script>
     </scripts>
     <scripts name="Items">
-      <script>scripts\scr_item_handler.gml</script>
+      <script>scripts\scr_item_collect.gml</script>
+      <script>scripts\scr_set_item_sprite.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -66,10 +67,9 @@
       <object>objects\obj_grasmud</object>
       <object>objects\obj_floor</object>
     </objects>
-    <objects name="NPCs and Objects">
+    <objects name="NPCs">
       <object>objects\obj_turtle</object>
       <object>objects\obj_box</object>
-      <object>objects\obj_item_key</object>
       <object>objects\obj_inventory</object>
     </objects>
     <objects name="Doors and Barriers">
@@ -78,8 +78,8 @@
       <object>objects\obj_door_3</object>
       <object>objects\obj_door_5</object>
     </objects>
-    <objects name="Parent Objects">
-      <object>objects\obj_parent_items</object>
+    <objects name="Items">
+      <object>objects\obj_item</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -27,13 +27,33 @@
             <kind>1</kind>
             <string>/*
 Inventory Items
-0 = Key
-1 = Box
+
+There is only 1 Sprite with the Items listed in it. 
+Each Item will be a Position (index) in the Itemssprite
+
+================
+spr_items List:
+0 = Box
+1 = Key
+================
+
+To configure an item in a Level, just drag the obj_item Object and 
+add to the creation code following lines:
+
+--------------------------------
+itemType = 0;                      &lt;-- define here which number from the List above, represents this item
+scr_set_item_sprite(itemType);     &lt;-- This sets the corresponding Index to the number choosen
+--------------------------------
+
+----&gt; Keep this list updated!! &lt;----
+
+Last updated: Angel, 04.05.2016
+
 */
 
 //Display the inventory?
 globalvar showInventory;
-showInventory = true;
+showInventory = false;
 
 //Total Inventory Item Space
 globalvar maxItems;
@@ -99,6 +119,7 @@ if(showInventory){
     for (i = 0; i &lt; maxItems; i += 1){
         draw_sprite(spr_inv_border, 0, x1 + 5 + (i * 40), y2 - 40);
         
+        //Draw, if found, Items into Inventory
         if(items[i] != -1){
             draw_sprite(spr_items, items[i], x1 + 24 + (i * 40), y2 - 24);
         }

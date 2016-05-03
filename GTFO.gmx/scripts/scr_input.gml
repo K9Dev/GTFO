@@ -11,4 +11,6 @@ down_key  = keyboard_check_pressed(ord("S"));
 pause_key = keyboard_check_pressed(ord("P"));
 cheat_key = keyboard_check_pressed(ord("Q"));
 
+inventory_key = keyboard_check_pressed(ord("I"));
+
 

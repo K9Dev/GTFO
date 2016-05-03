@@ -7,6 +7,15 @@ if (cheat_key){
     jump_counter =+5;
 }
 
+//Toggle Inventory
+if(inventory_key){
+    if(showInventory){
+        showInventory = false;
+    }else{
+        showInventory = true;
+    }
+}
+
 //pause
 if (pause_key and !just_paused){
     scr_save_position();

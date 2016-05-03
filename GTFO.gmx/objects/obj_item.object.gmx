@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>obj_parent_items</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>/// Initalize Variables
+
+//The Items Sprites Description is listed in the Inventory Object (obj_inventory)
+itemType = noone;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
