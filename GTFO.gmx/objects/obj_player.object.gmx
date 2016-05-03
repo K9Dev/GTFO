@@ -64,6 +64,30 @@ script_execute(state);
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_parent_items">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Collision with Item
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_door">
       <action>
         <libid>1</libid>
@@ -89,22 +113,26 @@ other.closed = false;
 //check which door it is and if requierements are met
 
 //for 1 jump doors
-if (other.door1 and obj_player_control.jump_counter &lt; 1){
+if (other.door1 and jump_counter &lt; 1){
     other.closed = true;
 }
 
 //for 3 jump doors
-if (other.door3 and obj_player_control.jump_counter &lt; 3){
+if (other.door3 and jump_counter &lt; 3){
+    logger("Door 3: jump_counter = " + string(jump_counter));
+    logger("Door closed now true");
     other.closed = true;
 }
 
 //for 5 jump doors
-if (other.door5 and obj_player_control.jump_counter &lt; 5){
+if (other.door5 and jump_counter &lt; 5){
     other.closed = true;
 }
 
 //going through door. the variables for the door can be set in the instance creation code for each door individually
 if(down_key and !other.closed){
+
+    logger("Changed room!");
     room_goto(other.new_room);
     x = other.doorx;
     y = other.doory;  

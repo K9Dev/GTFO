@@ -4,7 +4,7 @@ scr_input();
 
 //cheating additional jumps
 if (cheat_key){
-    obj_player_control.jump_counter =+5;
+    jump_counter =+5;
 }
 
 //pause

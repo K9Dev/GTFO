@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>-1000</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,34 +25,27 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize stats
-//Variables are made Global for easy use in other Codes
-globalvar level;
-level = 1;
+            <string>/*
+Inventory Items
+0 = Key
+1 = Box
+*/
 
-globalvar player_lives;
-player_lives = 5;
+//Display the inventory?
+globalvar showInventory;
+showInventory = true;
 
-globalvar jump_limit;
-jump_limit = 5;
+//Total Inventory Item Space
+globalvar maxItems;
+maxItems = 5;
 
-globalvar jump_counter;
-jump_counter = jump_limit;
+//Array with Items
+globalvar items;
 
-globalvar hp_max;
-hp_max = 3;
-
-globalvar hp;
-hp = hp_max;
-
-globalvar stamina_max;
-stamina_max = 3;
-
-globalvar stamina;
-stamina = stamina_max;
-
-globalvar keys_counter;
-keys_counter = 0;
+//fill the array with -1 ( = empty)
+for ( i = 0; i &lt; maxItems; i += 1 ){
+    items[i] = -1;
+}
 </string>
           </argument>
         </arguments>
@@ -75,14 +68,42 @@ keys_counter = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw HUB
+            <string>/// Draw Inventory
 
-draw_set_colour(c_black);
-draw_text(view_xview[0]+16, view_yview[0]+16, "Level " + string(level));
-draw_text(view_xview[0]+16, view_yview[0]+32, "Lives: " + string(player_lives));
-draw_text(view_xview[0]+16, view_yview[0]+48, "HP: " + string(hp) + "/" + string(hp_max));
-draw_text(view_xview[0]+16, view_yview[0]+64, "Jumps: " + string(jump_counter));
-draw_text(view_xview[0]+16, view_yview[0]+80, "Keys: " + string(keys_counter));
+if(showInventory){
+    
+    //Coordinates for Rectangle
+    var x1;
+    var x2;
+    var y1;
+    var y2;
+    
+    x1 = view_xview[0] + 200;
+    x2 = x1 + 150;    
+    y1 = view_yview[0];
+    y2 = y1 + 64;
+
+    //Window color
+    draw_set_colour(c_blue);
+    
+    //Density of the Color
+    draw_set_alpha(0.7);
+    
+    //Last paramenter Outline is 0 for Full rectangle and 1 for outlined
+    draw_rectangle(x1, y1, x2, y2, 0);
+    
+    //Draw the next things with full color density
+    draw_set_alpha(1);
+    
+    //Draw Inventory Space
+    for (i = 0; i &lt; maxItems; i += 1){
+        draw_sprite(spr_inv_border, 0, x1 + 5 + (i * 40), y2 - 40);
+        
+        if(items[i] != -1){
+            draw_sprite(spr_items, items[i], x1 + 24 + (i * 40), y2 - 24);
+        }
+    }
+}
 </string>
           </argument>
         </arguments>

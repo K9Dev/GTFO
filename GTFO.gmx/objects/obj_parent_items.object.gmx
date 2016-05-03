@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>0</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,64 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize stats
-//Variables are made Global for easy use in other Codes
-globalvar level;
-level = 1;
-
-globalvar player_lives;
-player_lives = 5;
-
-globalvar jump_limit;
-jump_limit = 5;
-
-globalvar jump_counter;
-jump_counter = jump_limit;
-
-globalvar hp_max;
-hp_max = 3;
-
-globalvar hp;
-hp = hp_max;
-
-globalvar stamina_max;
-stamina_max = 3;
-
-globalvar stamina;
-stamina = stamina_max;
-
-globalvar keys_counter;
-keys_counter = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Draw HUB
-
-draw_set_colour(c_black);
-draw_text(view_xview[0]+16, view_yview[0]+16, "Level " + string(level));
-draw_text(view_xview[0]+16, view_yview[0]+32, "Lives: " + string(player_lives));
-draw_text(view_xview[0]+16, view_yview[0]+48, "HP: " + string(hp) + "/" + string(hp_max));
-draw_text(view_xview[0]+16, view_yview[0]+64, "Jumps: " + string(jump_counter));
-draw_text(view_xview[0]+16, view_yview[0]+80, "Keys: " + string(keys_counter));
+            <string>/// Initialize Variable
+globalvar item_type;
 </string>
           </argument>
         </arguments>
