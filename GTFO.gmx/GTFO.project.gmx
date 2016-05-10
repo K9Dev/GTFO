@@ -34,6 +34,7 @@
     <sprites name="Items / Objects">
       <sprite>sprites\spr_box</sprite>
       <sprite>sprites\spr_items</sprite>
+      <sprite>sprites\spr_pot</sprite>
     </sprites>
     <sprites name="GUI">
       <sprite>sprites\spr_inv_border</sprite>
@@ -86,8 +87,13 @@
       <object>objects\obj_item</object>
       <object>objects\obj_inventory</object>
     </objects>
-    <object>objects\obj_box</object>
-    <object>objects\obj_music</object>
+    <objects name="Helper Objects">
+      <object>objects\obj_music</object>
+    </objects>
+    <objects name="Ingame Objects">
+      <object>objects\obj_box</object>
+      <object>objects\obj_pot</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test_puzzle</room>
