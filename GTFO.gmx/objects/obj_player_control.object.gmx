@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize stats
+
+scr_item_array();
+
 //Variables are made Global for easy use in other Codes
 globalvar level;
 level = 1;

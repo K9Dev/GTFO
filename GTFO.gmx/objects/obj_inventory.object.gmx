@@ -61,11 +61,11 @@ globalvar maxItems;
 maxItems = 10;
 
 //Array with Items
-globalvar items;
+globalvar inventory_items;
 
 //fill the array with -1 ( = empty)
 for ( i = 0; i &lt; maxItems; i += 1 ){
-    items[i] = -1;
+    inventory_items[i] = -1;
 }
 </string>
           </argument>
@@ -103,10 +103,10 @@ if(showInventory){
     
     var maxItemsPerRow;
     
-    x1 = view_xview[0] + 100;
+    x1 = view_xview[0] + 200;
     x2 = x1 + 160;    
     y1 = view_yview[0];
-    y2 = y1 + 49;
+    y2 = y1 + 248;
 
     maxItemsPerRow = 5;
 /*
@@ -119,6 +119,8 @@ if(showInventory){
     //Last paramenter Outline is 0 for Full rectangle and 1 for outlined
     draw_rectangle(x1, y1, x2, y2, 0);
     */
+    
+    draw_set_alpha(0.6);
     draw_sprite(spr_inv_base, 0, x1, y2);
     
     
@@ -133,11 +135,16 @@ if(showInventory){
 
         if (i &lt;= maxItemsPerRow){
             
-            draw_sprite(spr_inv_border, 0, x1 + 7 + (i * 40), y2 + 10);
+            draw_sprite_ext(spr_inv_border, 0, x1 + 2 + (i * 25), y2 + 3, 0.7, 0.7, 0, c_white, 1);
         
             //Draw, if found, Items into Inventory
-            if(items[i] != -1){
-                draw_sprite(spr_items, items[i], x1 + 24 + (i * 40), y2 - 24);
+            if(inventory_items[i] != -1){
+                draw_sprite_ext(inventory_items[i], 0, x1 + 14 + (i * 25), y2 + 11, 0.5, 0.5, 0, c_white, 1);
+                
+                var item_counter = scr_get_item_info(inventory_items[i], 2);
+                
+                //draw_text(x1 + 14 + (i * 25), y2 + 15, item_counter);
+                draw_text_ext_transformed_colour(x1 + 12 + (i * 25), y2 + 16, item_counter, 1, 23, 0.5, 0.5, 0, c_white, c_white, c_white, c_black, 1);
             }
         }else{
             
@@ -145,9 +152,9 @@ if(showInventory){
             draw_sprite(spr_inv_border, 0, x1 + 7 + (i * 40), y2 + 59);
         
             //Draw, if found, Items into Inventory
-            if(items[i] != -1){
+            /*if(items[i] != -1){
                 draw_sprite(spr_items, items[i], x1 + 24 + (i * 40), y2 - 24);
-            }
+            }*/
         }
         
         

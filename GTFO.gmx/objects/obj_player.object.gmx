@@ -88,7 +88,7 @@ hsp = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_item">
+    <event eventtype="4" ename="obj_item_parent">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -106,24 +106,25 @@ hsp = 0;
           <argument>
             <kind>1</kind>
             <string>//Collision with Item, pickup
-var pickedUp = scr_item_collect(other.itemType);
+var pickedUp = scr_item_collect(other.sprite_index);
 
 //Item is picked up
 if(pickedUp){
 
 //Get instance of item
-var inst = instance_place(x, y, obj_item);
+var inst = instance_place(x, y, obj_item_parent);
 
 logger("Instance found (item) : " + string(inst));
 
     //Destroy instance of item
     with(inst){
        instance_destroy();
+       logger("Instance destroyed.");
     }
 
 }else{
     //Inventory is full!
-    show_message("Das Inventar ist voll!");
+    //show_message("Das Inventar ist voll!");
 }
 </string>
           </argument>
