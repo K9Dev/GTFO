@@ -35,6 +35,7 @@ Each Item will be a Position (index) in the Itemssprite
 spr_items List:
 0 = Box
 1 = Key
+2 = Pot
 ================
 
 To configure an item in a Level, just drag the obj_item Object and 

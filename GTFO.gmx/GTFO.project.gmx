@@ -34,7 +34,6 @@
     <sprites name="Items / Objects">
       <sprite>sprites\spr_box</sprite>
       <sprite>sprites\spr_items</sprite>
-      <sprite>sprites\spr_pot</sprite>
     </sprites>
     <sprites name="GUI">
       <sprite>sprites\spr_inv_border</sprite>
@@ -89,7 +88,6 @@
     </objects>
     <object>objects\obj_box</object>
     <object>objects\obj_music</object>
-    <object>objects\obj_pot</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test_puzzle</room>
