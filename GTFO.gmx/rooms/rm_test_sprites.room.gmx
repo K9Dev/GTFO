@@ -143,7 +143,10 @@
     <instance objName="obj_grasmud" x="992" y="544" name="inst_6E794340" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_box" x="640" y="672" name="inst_CB820EF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_turtle" x="864" y="640" name="inst_B58D6F31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="64" y="640" name="inst_91F7AAD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_button" x="256" y="640" name="inst_25F16866" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_button" x="928" y="672" name="inst_D60083E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_switch" x="160" y="640" name="inst_CD89DDB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_barrier" x="832" y="608" name="inst_8FD292DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bkg_wooden" x="960" y="672" w="32" h="32" xo="0" yo="0" id="10000001" name="inst_2BCE8B8E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

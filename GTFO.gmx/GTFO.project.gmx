@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\bgm_glock</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Player Sprites">
       <sprite>sprites\spr_left</sprite>
@@ -32,6 +34,7 @@
     <sprites name="Items / Objects">
       <sprite>sprites\spr_box</sprite>
       <sprite>sprites\spr_items</sprite>
+      <sprite>sprites\spr_pot</sprite>
     </sprites>
     <sprites name="GUI">
       <sprite>sprites\spr_inv_border</sprite>
@@ -69,18 +72,23 @@
     </objects>
     <objects name="NPCs">
       <object>objects\obj_turtle</object>
-      <object>objects\obj_box</object>
-      <object>objects\obj_inventory</object>
     </objects>
     <objects name="Doors and Barriers">
       <object>objects\obj_door</object>
       <object>objects\obj_door_1</object>
       <object>objects\obj_door_3</object>
       <object>objects\obj_door_5</object>
+      <object>objects\obj_button</object>
+      <object>objects\obj_switch</object>
+      <object>objects\obj_barrier</object>
     </objects>
     <objects name="Items">
       <object>objects\obj_item</object>
+      <object>objects\obj_inventory</object>
     </objects>
+    <object>objects\obj_box</object>
+    <object>objects\obj_music</object>
+    <object>objects\obj_pot</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test_puzzle</room>

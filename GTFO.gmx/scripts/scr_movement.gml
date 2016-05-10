@@ -9,6 +9,11 @@ if(vsp < 10){
     vsp += grav;
 }
 
+//slow down when pushing box
+if(place_meeting(x+1, y, obj_box) or place_meeting(x-1, y, obj_box)){
+    hsp = hsp/2;
+}
+
 
 //Check if a floor is below the player --> if true, you can jump
 if(place_meeting(x, y + 1, obj_floor)){
