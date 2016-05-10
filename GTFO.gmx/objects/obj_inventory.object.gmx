@@ -57,7 +57,7 @@ showInventory = false;
 
 //Total Inventory Item Space
 globalvar maxItems;
-maxItems = 5;
+maxItems = 10;
 
 //Array with Items
 globalvar items;
@@ -97,32 +97,59 @@ if(showInventory){
     var x2;
     var y1;
     var y2;
+    var x1_save;
+    var y1_save;
     
-    x1 = view_xview[0] + 200;
-    x2 = x1 + 150;    
+    var maxItemsPerRow;
+    
+    x1 = view_xview[0] + 100;
+    x2 = x1 + 160;    
     y1 = view_yview[0];
-    y2 = y1 + 64;
+    y2 = y1 + 49;
 
+    maxItemsPerRow = 5;
+/*
     //Window color
-    draw_set_colour(c_blue);
+    draw_set_colour(c_dkgray);
     
     //Density of the Color
     draw_set_alpha(0.7);
     
     //Last paramenter Outline is 0 for Full rectangle and 1 for outlined
     draw_rectangle(x1, y1, x2, y2, 0);
+    */
+    draw_sprite(spr_inv_base, 0, x1, y2);
+    
     
     //Draw the next things with full color density
     draw_set_alpha(1);
     
+    x1_save = x1;
+    y1_save = y2;
+    
     //Draw Inventory Space
     for (i = 0; i &lt; maxItems; i += 1){
-        draw_sprite(spr_inv_border, 0, x1 + 5 + (i * 40), y2 - 40);
+
+        if (i &lt;= maxItemsPerRow){
+            
+            draw_sprite(spr_inv_border, 0, x1 + 7 + (i * 40), y2 + 10);
         
-        //Draw, if found, Items into Inventory
-        if(items[i] != -1){
-            draw_sprite(spr_items, items[i], x1 + 24 + (i * 40), y2 - 24);
+            //Draw, if found, Items into Inventory
+            if(items[i] != -1){
+                draw_sprite(spr_items, items[i], x1 + 24 + (i * 40), y2 - 24);
+            }
+        }else{
+            
+          //  scr_reset_
+            draw_sprite(spr_inv_border, 0, x1 + 7 + (i * 40), y2 + 59);
+        
+            //Draw, if found, Items into Inventory
+            if(items[i] != -1){
+                draw_sprite(spr_items, items[i], x1 + 24 + (i * 40), y2 - 24);
+            }
         }
+        
+        
     }
 }
 </string>
