@@ -4,7 +4,7 @@ scr_input();
 
 //cheating additional jumps
 if (cheat_key){
-    jump_counter =+5;
+    jump_counter = jump_limit;
 }
 
 //Toggle Inventory

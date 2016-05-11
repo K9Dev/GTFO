@@ -100,6 +100,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_level_1</room>
     <room>rooms\rm_test_puzzle</room>
     <room>rooms\rm_test_general</room>
     <room>rooms\rm_test_sprites</room>
