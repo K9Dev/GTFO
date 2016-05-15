@@ -98,10 +98,11 @@
       <object>objects\obj_box</object>
       <object>objects\obj_pot</object>
     </objects>
+    <object>objects\obj_collision</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_level_1</room>
     <room>rooms\rm_test_puzzle</room>
+    <room>rooms\rm_level_1</room>
     <room>rooms\rm_test_general</room>
     <room>rooms\rm_test_sprites</room>
     <room>rooms\rm_pause</room>

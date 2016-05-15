@@ -9,4 +9,7 @@ if(left_key){
 if(jump_key){
     sprite_index = spr_up;
 } 
+if(down_key){
+    sprite_index = spr_down;
+} 
 
