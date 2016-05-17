@@ -15,4 +15,6 @@ cheat_key = keyboard_check_pressed(ord("Q"));
 
 inventory_key = keyboard_check_pressed(ord("I"));
 
+action_key = keyboard_check_pressed(ord("K"));
+
 

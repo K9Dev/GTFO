@@ -84,6 +84,7 @@
       <object>objects\obj_button</object>
       <object>objects\obj_switch</object>
       <object>objects\obj_barrier</object>
+      <object>objects\switch_id</object>
     </objects>
     <objects name="Items">
       <object>objects\obj_item_goldkey</object>
