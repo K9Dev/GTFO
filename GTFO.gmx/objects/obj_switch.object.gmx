@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize Switch
-real_id = switch_id.zero;
+//real_id = switch_id.zero;
 </string>
           </argument>
         </arguments>
@@ -50,9 +50,13 @@ real_id = switch_id.zero;
           <argument>
             <kind>1</kind>
             <string>///Flip the Switch
+var switchName = noone;
 
 if (obj_player.action_key){
-    switch_id.zero = switch_id.zero*-1;
+    switchName = self.switch_name;
+            
+    logger("Switch Name = " + switchName);
+    scr_get_or_set_switch_barrier_value(switchName, false);
 }
 </string>
           </argument>

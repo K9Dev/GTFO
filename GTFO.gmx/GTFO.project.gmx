@@ -47,8 +47,6 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\logger.gml</script>
-    <script>scripts\scr_input.gml</script>
     <scripts name="Player State Scripts">
       <script>scripts\scr_main_state.gml</script>
       <script>scripts\scr_movement.gml</script>
@@ -57,10 +55,19 @@
       <script>scripts\scr_save_position.gml</script>
       <script>scripts\scr_jump_limitation.gml</script>
     </scripts>
-    <scripts name="Items">
+    <scripts name="Item Scripts">
       <script>scripts\scr_item_collect.gml</script>
       <script>scripts\scr_item_array.gml</script>
       <script>scripts\scr_get_item_info.gml</script>
+    </scripts>
+    <scripts name="Helper Scripts">
+      <script>scripts\scr_input.gml</script>
+      <script>scripts\logger.gml</script>
+    </scripts>
+    <scripts name="Object Scripts">
+      <script>scripts\scr_initialize_switchbarrier_array.gml</script>
+      <script>scripts\scr_switch_barrier_array.gml</script>
+      <script>scripts\scr_get_or_set_switch_barrier_value.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

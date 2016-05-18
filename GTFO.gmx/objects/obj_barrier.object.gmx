@@ -25,25 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Switch explained
-
-// Switches and barriers have the default id zero
-// IDs are managed by the switch_id object
-// To create a new switch/barrier pair create a new id in the switch_id object
-// Create the switch/barrier instance and change their instance variable (switchId) to the corresponding id
-// note, that you have to use the written-out number
-// As for now, you also have to add the id in the obj_barrier step event
-
-// Problem:
-// the switch and barrier object need to access the switch id in the step event.
-// setting a variable in the instance creation code will permantly set it to -1 (door closed)
-// to access the updated switch/barrier status with an instance variable the only way i see it is to use a switch methode
-// but every id has to be in the switch case, which isnt very clean/elegant
-
-// due to this problem, some parts may not be fully adapted in the code / incomplete
-
-image_speed = 0;
-switchId = "zero";
+            <string>image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -70,19 +52,19 @@ switchId = "zero";
 
 var barrier = 0;
 
-//As for now this switch case checks the switch id. New cases have to be added here
-switch (switchId){
-    case ("zero"):
-        barrier = switch_id.zero;
-    
-}
+var barriername = self.barrier_name;
+
+barrier = scr_get_or_set_switch_barrier_value(barriername, true);
+//logger("Barrier Value = " + string(barrier));
 
 //Close and open the barrier
 if (barrier = -1){
+//    logger("Black Barrier was -1 -&gt; close");
     image_index = 0;
 }
 
 if (barrier = 1){
+//    logger("Black Barrier was 1 -&gt; open");
     image_index = 1;
 }
 </string>

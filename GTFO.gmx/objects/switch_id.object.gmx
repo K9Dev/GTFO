@@ -25,18 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Switch Overview
-
-// ID       USE
-//
-// zero     Default ID
-
-
-//Initialize Switch IDs
-zero = -1;
-
-// Open = 1
-// Closed = -1
+            <string>///Initialize Switch Array
+scr_switch_barrier_array();
 </string>
           </argument>
         </arguments>

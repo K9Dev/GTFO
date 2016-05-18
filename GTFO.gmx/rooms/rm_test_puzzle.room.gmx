@@ -456,7 +456,7 @@
     <instance objName="obj_grasmud" x="1088" y="480" name="inst_736A433F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grasmud" x="1632" y="96" name="inst_56D46A32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grasmud" x="64" y="640" name="inst_26A8857D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="64" y="608" name="inst_DCB240FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="416" y="64" name="inst_DCB240FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_3" x="864" y="416" name="inst_76C434EC" locked="0" code="///door leading to rm_test_general&#xA;&#xA;new_room = rm_test_general;&#xA;doorx = 512;&#xA;doory = 320;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_inventory" x="192" y="448" name="inst_92DD445E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_3" x="224" y="640" name="inst_5A51F241" locked="0" code="///door leading to rm_test_general&#xA;&#xA;new_room = rm_test_general;&#xA;doorx = 512;&#xA;doory = 323;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -478,11 +478,12 @@
     <instance objName="obj_item_redkey" x="768" y="640" name="inst_6E26DA16" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_item_redkey" x="736" y="576" name="inst_9EAE775A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_item_redkey" x="800" y="672" name="inst_8727384F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_turtle" x="384" y="544" name="inst_65E6C0C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_switch" x="480" y="672" name="inst_612578BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_barrier" x="576" y="640" name="inst_1CC9A21D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_switch" x="736" y="672" name="inst_C07898EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="switch_id" x="64" y="384" name="inst_199AFED7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_turtle" x="384" y="544" name="inst_65E6C0C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_switch" x="480" y="64" name="inst_612578BC" locked="0" code="switch_name = &quot;black_barrier&quot;;&#xA;&#xA;scr_initialize_switchbarrier_array(switch_name);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_barrier" x="544" y="32" name="inst_1CC9A21D" locked="0" code="barrier_name = &quot;black_barrier&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_switch" x="608" y="64" name="inst_C07898EB" locked="0" code="switch_name = &quot;red_barrier&quot;;&#xA;&#xA;scr_initialize_switchbarrier_array(switch_name);&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_barrier" x="672" y="32" name="inst_7DD72761" locked="0" code="barrier_name = &quot;red_barrier&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
