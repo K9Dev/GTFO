@@ -1,3 +1,4 @@
+///scr_initialize_switchbarrier_array(pairName)
 // Fills free position in the Switch Barrier Array with name from Argument
 var pairName = argument0;
 

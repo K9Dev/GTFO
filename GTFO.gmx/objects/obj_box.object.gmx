@@ -45,6 +45,9 @@ if!(place_meeting(x+1, y, obj_floor) or place_meeting(x-1, y, obj_floor)){
 if!(place_meeting(x, y+1, obj_floor)){
     y += 4;
 }
+
+//sliding hills
+scr_sliding();
 </string>
           </argument>
         </arguments>

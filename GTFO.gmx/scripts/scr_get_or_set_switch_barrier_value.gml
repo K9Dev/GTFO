@@ -1,3 +1,4 @@
+///scr_get_or_set_switch_barrier_value(pair_name, isGet)
 //Gets or sets a Value from the Switch Barrier Array
 var pair_name = argument0;
 var isGet = argument1;

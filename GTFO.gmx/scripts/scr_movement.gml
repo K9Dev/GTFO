@@ -60,3 +60,9 @@ if(place_meeting(x, y + vsp, obj_collision)){
 
 //Move the player
 y += vsp;
+
+//sliding hills
+scr_sliding();
+
+//going uphills
+scr_going_uphill();
