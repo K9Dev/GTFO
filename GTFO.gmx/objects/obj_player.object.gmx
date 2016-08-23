@@ -6,7 +6,7 @@
   <depth>-1</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>spr_slime_mask</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -106,7 +106,8 @@ hsp = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Collision with Item, pickup
+            <string>/// Pick up the Item
+//Collision with Item, pickup
 var pickedUp = scr_item_collect(other.sprite_index);
 
 //Item is picked up
