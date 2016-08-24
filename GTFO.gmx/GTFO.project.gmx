@@ -34,7 +34,9 @@
         <sprite>sprites\spr_floor_basic</sprite>
         <sprite>sprites\spr_greenhills_mud</sprite>
         <sprite>sprites\spr_greenhills_behindhill</sprite>
+        <sprite>sprites\spr_greenhills_behindhill_m</sprite>
         <sprite>sprites\spr_greenhills_hill</sprite>
+        <sprite>sprites\spr_greenhills_hill_m</sprite>
       </sprites>
     </sprites>
     <sprites name="Doors and Barriers">
@@ -67,6 +69,9 @@
   <backgrounds name="background">
     <background>background\bkg_wooden</background>
     <background>background\bk_greenhills</background>
+    <background>background\bk_stones</background>
+    <background>background\bk_Stones_all</background>
+    <background>background\bk_stones_fade</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -96,6 +101,9 @@
       <script>scripts\scr_get_or_set_switch_barrier_value.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_default</font>
+  </fonts>
   <objects name="objects">
     <objects name="Player Objects">
       <object>objects\obj_player</object>
@@ -111,8 +119,10 @@
       <objects name="Greenhills">
         <object>objects\obj_floor_basic</object>
         <object>objects\obj_greenhills_mud</object>
-        <object>objects\obj_greenhills_behind_hill</object>
         <object>objects\obj_greenhills_hill</object>
+        <object>objects\obj_greenhills_behind_hill</object>
+        <object>objects\obj_greenhills_hill_m</object>
+        <object>objects\obj_greenhills_behindhill_m</object>
       </objects>
     </objects>
     <objects name="NPCs">
@@ -144,11 +154,12 @@
     <object>objects\obj_collision</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room6</room>
+    <room>rooms\rm_test_sprites</room>
     <room>rooms\rm_test_puzzle</room>
     <room>rooms\rm_level_1</room>
     <room>rooms\rm_hills</room>
     <room>rooms\rm_test_general</room>
-    <room>rooms\rm_test_sprites</room>
     <room>rooms\rm_pause</room>
   </rooms>
   <help>
