@@ -65,6 +65,7 @@
       <sprite>sprites\spr_inv_base</sprite>
     </sprites>
     <sprite>sprites\Sprite_Sheet</sprite>
+    <sprite>sprites\spr_raindrop</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkg_wooden</background>
@@ -152,9 +153,16 @@
       <object>objects\obj_pot</object>
     </objects>
     <object>objects\obj_collision</object>
+    <object>objects\obj_raindrop</object>
+    <object>objects\obj_rain</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room6</room>
+    <rooms name="one jump">
+      <room>rooms\rm_1</room>
+      <room>rooms\rm_2</room>
+      <room>rooms\rm_3</room>
+    </rooms>
+    <room>rooms\rm_test_tiles</room>
     <room>rooms\rm_test_sprites</room>
     <room>rooms\rm_test_puzzle</room>
     <room>rooms\rm_level_1</room>
